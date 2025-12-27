@@ -11,7 +11,7 @@ on:
       MODEL:
         description: 'Model selection'
         required: true
-        default: 'cmcc_a10'
+        default: 'cmcc_rax3000m'
         type: string
       FIP_VERSION: 
         description: 'FIP versions (comma-separated, e.g., 2022,2023,2024,all)'

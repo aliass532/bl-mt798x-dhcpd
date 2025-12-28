@@ -1,13 +1,18 @@
 # ATF and u-boot for mt798x
 
-A modified version of hanwckf's u-boot for mt798x by Yuzhii, with support for auto dhcp, and beautiful webui.(build with version 2022/2023/2024)
+A modified version of hanwckf's u-boot for mt798x by Yuzhii, with support for auto dhcp, and beautiful webui.(build with version 2022/2023/2024/2025)
 
 Support Actions to build automatically, generate normal/overclocking BL2. 
 
 ## About bl-mt798x
+
 - https://cmi.hanwckf.top/p/mt798x-uboot-usage
 
+> Version-2022 WEBUI preview
+
 ![Version-2022](document/uboot-2022.png)
+
+> Version-2023/2024 WEBUI preview
 
 ![Version-2023/2024](document/uboot-2023.png)
 
@@ -60,6 +65,32 @@ Generate file will be in `output_gpt`
 - [ ] Build BL2 (Normal)
 - [ ] Build BL2 (Overclocking)
 - [ ] Multi-layout support (Only for multi-layout devices)
+
+
+## FIT support
+
+This function is from 1715173329's [bl-mt798x-oss](https://github.com/1715173329/bl-mt798x-oss/tree/fit-example)
+
+I based on his work to make a patch to support FIT image.
+
+There only supports a limited number of models, If your device is not in the list, you can try to add support by yourself according to his work.
+
+***BUT NOT TESTED YET!***
+
+So, **You MUST test it by yourself, and have risk of BRICK!**
+
+There are two way to build.
+
+1. Apply patch and build Version 2022
+
+    ```bash
+    git apply modify-patch/0002-uboot-2022-fit-merge-code-from-1715173329-to-support.patch
+    SOC=mt7981 BOARD=your_board VERSION=2022 ./build.sh
+    ```
+
+2. Build on Actions
+
+Open the repository Actions tab, and choose "Build FIT BL2 and FIP" workflow, then run it.
 
 ---
 

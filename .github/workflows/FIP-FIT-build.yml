@@ -99,7 +99,7 @@ jobs:
           export SOC="${CONFIG%%_*}"
           BOARD="${CONFIG#*_}"
           export BOARD="${BOARD%_*}"
-          export VERSION="2022"
+          export VERSION="2024"
           mkdir -p "output"
           SOC="$SOC" BOARD="$BOARD" VERSION="$VERSION" ./build.sh 2>&1 | tee "output/build.log"
           echo "ARTIFACT_NAME=$SOC-$BOARD" >> "$GITHUB_ENV"

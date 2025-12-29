@@ -10,11 +10,15 @@ Support Actions to build automatically, generate normal/overclocking BL2.
 
 > Version-2022 WEBUI preview
 
-![Version-2022](document/uboot-2022.png)
+![Version-2022](document/pictures/uboot-2022.png)
 
 > Version-2023/2024 WEBUI preview
 
-![Version-2023/2024](document/uboot-2023.png)
+![Version-2023/2024](document/pictures/uboot-2023.png)
+
+> Version-2025 WEBUI preview
+
+![Version-2025](document/pictures/uboot-2025.png)
 
 ## Prepare
 
@@ -65,7 +69,9 @@ Generate file will be in `output_gpt`
 - [ ] Build BL2 (Normal)
 - [ ] Build BL2 (Overclocking)
 - [ ] Multi-layout support (Only for multi-layout devices)
+- [ ] Special subnet support (Custom default IP for DHCPD)
 
+> Although you can customize the dhcpd subnet, but the mask is fixed to "255.255.255.0", so you must ensure your device is in this subnet.
 
 ## FIT support
 
